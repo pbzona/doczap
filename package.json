@@ -1,0 +1,15 @@
+{
+  "name": "doczap",
+  "version": "1.0.0",
+  "description": "Update stale docs list and send it to a webhook",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phil Zona",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "^1.1.4"
+  }
+}
