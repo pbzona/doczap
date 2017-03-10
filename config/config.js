@@ -3,7 +3,7 @@ const path = require('path');
 const {exec, execSync} = require('child_process');
 
 // Need this for sanitizing file paths below
-const util = require('../modules/util');
+const utils = require('../modules/util');
 
 // Creates a backup CSV file of any stale docs. Change this to modify its location
 var csvFile = './stale-docs.csv';
