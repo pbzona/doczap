@@ -20,6 +20,10 @@ module.exports = function(input) {
     .on('done', (err) => {
       if (err) reject(new Error(`Error converting to JSON: ${err.message}`));
 
+      // This line is optional, you can uncomment it to see exactly what's being formed 
+      // in case you want to customize the zap to only choose certain fields or put it through 
+      // another API later
+      console.log(docsObject);
       resolve(docsObject);
     });
   });

@@ -18,6 +18,22 @@ Clone the repo, navigate to the installation directory and run:
 
 ## Configuration
 
+If you don't already have a webhook, create one before editing the config file.
+
+### Setting up the Webhook
+
+1.  On Zapier, create a new zap, using "Webhooks by Zapier" as the trigger. You don't need to set up a child key since we're generating a custom payload that doesn't really need to be sorted.
+
+2.  From the generated webhook URL, grab the hook path. This will usually be something like `/hooks/catch/abc123`. The leading slash is important! Add this value to the configuration file (`config/config.js`) as the value for `path` in the `reqOptions` object.
+
+3.  For the second step in your zap, select Gmail. Choose "Send Email" as the action. You'll need to allow Zapier to access your Gmail account to do so. In this step, you may want to set up an alias on your account to allow you to send emails from the `docs@` address, but that's up to you.
+
+4.  Fill out the template for the email The "to" field should be `docs@linode.com`, and the body should be the "Stale" field. This is just the root of the payload object that's being sent to the webhook. To select this, click the options tab (some lines with a plus sign in the input box) and choose it from the dropdown. The rest of the fields can be filled out as you see fit.
+
+5.  Once this is done, Zapier will generate a test email. Check the docs inbox to make sure it worked.
+
+### Edit the DocZap Config File
+
 Config values live in the `config/config.js` file. At a minimum, you'll need to
 add a valid Zapier webhook path to the `reqOptions` object, under `path`. The
 webhook path is just the part after `.com` in the URL.

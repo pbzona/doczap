@@ -10,8 +10,8 @@ var csvFile = './stale-docs.csv';
 
 // Define file locations and relative paths for docsmith tasks
 var docsmithPath = '~/docsmith';
-var pathToDocsmith = util.cleanUp(path.relative('.', `${docsmithPath}`));
-var pathToDocs = util.cleanUp(path.relative('.', `${util.cleanUp(path.join(docsmithPath, 'source'))}`));
+var pathToDocsmith = utils.cleanUp(path.relative('.', `${docsmithPath}`));
+var pathToDocs = utils.cleanUp(path.relative('.', `${utils.cleanUp(path.join(docsmithPath, 'source'))}`));
 
 // Number of months to use as the cutoff when defining "stale" - default 24
 var staleAge = 24;
