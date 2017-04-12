@@ -23,7 +23,7 @@ module.exports = function(input) {
       // This line is optional, you can uncomment it to see exactly what's being formed 
       // in case you want to customize the zap to only choose certain fields or put it through 
       // another API later
-      console.log(docsObject);
+      //console.log(docsObject);
       resolve(docsObject);
     });
   });
